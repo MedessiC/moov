@@ -71,7 +71,27 @@ export function Footer() {
 
           {/* MIDEESSI */}
           <div>
-            <h4 className="font-heading font-bold text-gold mb-4">MIDEESSI</h4>
+            <h4 className="font-heading font-bold text-gold mb-4">Légal</h4>
+            <ul className="space-y-2">
+              {[
+                { name: "Politique de Confidentialité", href: "/privacy-policy" },
+                { name: "Conditions d'Utilisation", href: "/terms-of-use" },
+              ].map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    className="text-primary-foreground/70 hover:text-gold transition-colors text-sm"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* MIDEESSI */}
+          <div>
+            <h4 className="font-heading font-bold text-gold mb-4">À Propos</h4>
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-4">
               Mouvement d'indépendance technologique né au cœur du Bénin. 
               Nous concevons et innovons avec notre savoir-faire béninois.

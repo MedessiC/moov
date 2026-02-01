@@ -11,6 +11,8 @@ const Forfaits = lazy(() => import("./pages/Forfaits"));
 const Inscription = lazy(() => import("./pages/Inscription"));
 const APropos = lazy(() => import("./pages/APropos"));
 const FAQ = lazy(() => import("./pages/FAQ"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsOfUse = lazy(() => import("./pages/TermsOfUse"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Loading component
@@ -35,6 +37,8 @@ const App = () => (
             <Route path="/inscription" element={<Inscription />} />
             <Route path="/a-propos" element={<APropos />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-use" element={<TermsOfUse />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
