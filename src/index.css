@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MIDEESSI Design System - MIKPLÉ MVP
+   Couleurs: bleu nuit (#191970), blanc (#FFFFFF), gris clair (#D3D3D3), noir (#000000), jaune (#FFD700)
+   Typographie: Montserrat (titres), Open Sans (paragraphes)
+*/
+
+@layer base {
+  :root {
+    /* MIDEESSI Brand Colors */
+    --midnight-blue: 240 64% 27%;
+    --gold: 51 100% 50%;
+    --light-gray: 0 0% 83%;
+    --pure-white: 0 0% 100%;
+    --pure-black: 0 0% 0%;
+
+    /* Semantic tokens */
+    --background: 0 0% 100%;
+    --foreground: 240 64% 27%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 64% 27%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 64% 27%;
+
+    --primary: 240 64% 27%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 51 100% 50%;
+    --secondary-foreground: 240 64% 27%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 51 100% 50%;
+    --accent-foreground: 240 64% 27%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 240 64% 27%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(240 64% 27%) 0%, hsl(240 64% 20%) 50%, hsl(240 64% 15%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(51 100% 50%) 0%, hsl(45 100% 45%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(240 64% 27% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(240 64% 27% / 0.1), 0 2px 4px -2px hsl(240 64% 27% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(240 64% 27% / 0.1), 0 4px 6px -4px hsl(240 64% 27% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(240 64% 27% / 0.1), 0 8px 10px -6px hsl(240 64% 27% / 0.1);
+    --shadow-gold: 0 4px 14px 0 hsl(51 100% 50% / 0.4);
+
+    /* Sidebar */
+    --sidebar-background: 240 64% 27%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 51 100% 50%;
+    --sidebar-primary-foreground: 240 64% 27%;
+    --sidebar-accent: 240 64% 35%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 64% 35%;
+    --sidebar-ring: 51 100% 50%;
+  }
+
+  .dark {
+    --background: 240 64% 10%;
+    --foreground: 0 0% 100%;
+
+    --card: 240 64% 15%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 240 64% 15%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 51 100% 50%;
+    --primary-foreground: 240 64% 27%;
+
+    --secondary: 240 64% 27%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 64% 20%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 51 100% 50%;
+    --accent-foreground: 240 64% 27%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 64% 25%;
+    --input: 240 64% 25%;
+    --ring: 51 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: var(--gradient-hero);
+    background-color: hsl(var(--primary)); /* fallback if gradient is not applied */
+  }
+
+  .gold-gradient {
+    background: var(--gradient-gold);
+  }
+
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  /* Pattern overlay for hero sections */
+  .pattern-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFD700' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  /* African geometric pattern */
+  .african-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFD700' fill-opacity='0.06'%3E%3Cpath d='M40 0L0 40l40 40 40-40L40 0zm0 10l30 30-30 30-30-30 30-30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  .animate-pulse-gold {
+    animation: pulseGold 2s ease-in-out infinite;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes pulseGold {
+    0%, 100% {
+      box-shadow: 0 0 0 0 hsl(51 100% 50% / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 10px hsl(51 100% 50% / 0);
+    }
+  }
+}

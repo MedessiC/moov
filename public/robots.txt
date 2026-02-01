@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /private
+
+# Crawl delay (in seconds) to be respectful
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://mikple.com/sitemap.xml
+
+# Special rules for specific bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /

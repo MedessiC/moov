@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- Background (Or/Jaune) -->
+  <rect width="256" height="256" fill="#ffd700" rx="32"/>
+  
+  <!-- Lettre M (Bleu nuit) -->
+  <text x="128" y="190" font-family="Montserrat, sans-serif" font-size="160" font-weight="700" fill="#191970" text-anchor="middle" dominant-baseline="middle">
+    M
+  </text>
+</svg>
