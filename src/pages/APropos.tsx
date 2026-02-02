@@ -127,11 +127,37 @@ export default function APropos() {
             </h2>
             
             <div className="prose prose-lg max-w-none">
+              {/* Etymology - Fon Language */}
+              <div className="bg-gold/10 rounded-2xl border border-gold/30 p-8 lg:p-10 mb-8">
+                <h3 className="font-heading text-2xl font-bold text-foreground mb-4">
+                  Étymologie : L'âme béninoise dans chaque syllabe
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  <strong className="text-foreground text-lg">MIKPLÉ</strong> est un mot en <strong>langue fon</strong>, 
+                  langue maternelle du Bénin et du Dahomey. Il signifie littéralement :
+                </p>
+                <div className="bg-white rounded-xl p-6 my-6 text-center">
+                  <p className="font-heading text-3xl font-bold text-gold mb-2">
+                    "On se rassemble"
+                  </p>
+                  <p className="text-muted-foreground italic">
+                    (Union collective, entraide communautaire, force du nombre)
+                  </p>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  Ce nom n'est pas un hasard. MIKPLÉ incarne la philosophie béninoise ancestrale : 
+                  la <strong>solidarité collective</strong>, l'<strong>entraide mutuelle</strong> et la 
+                  <strong>force du rassemblement</strong>. Ensemble, nous sommes plus forts, ensemble 
+                  nous économisons davantage, ensemble nous construisons une indépendance technologique 
+                  pour le Bénin.
+                </p>
+              </div>
+
               <div className="bg-card rounded-2xl border border-border p-8 lg:p-10 space-y-6">
                 <p className="text-muted-foreground leading-relaxed">
                   <strong className="text-foreground">MIKPLÉ</strong> est un service de mise en relation 
                   développé par MIDEESSI pour permettre aux Béninois de profiter des forfaits famille 
-                  Moov sans les contraintes habituelles. NOUS NE VENDONS PAS LES FORFAITS .
+                  Moov sans les contraintes habituelles. NOUS NE VENDONS PAS LES FORFAITS.
                 </p>
                 
                 <p className="text-muted-foreground leading-relaxed">
