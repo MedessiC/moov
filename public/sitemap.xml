@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Home Page -->
+  <!-- Home Page - Highest Priority -->
   <url>
     <loc>https://mikple.com/</loc>
-    <lastmod>2026-02-01</lastmod>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -13,15 +13,23 @@
   <!-- Forfaits Page -->
   <url>
     <loc>https://mikple.com/forfaits</loc>
-    <lastmod>2026-02-01</lastmod>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Inscription Page - High Priority -->
+  <url>
+    <loc>https://mikple.com/inscription</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Inscription Page -->
+  <!-- À propos Page -->
   <url>
-    <loc>https://mikple.com/inscription</loc>
-    <lastmod>2026-02-01</lastmod>
+    <loc>https://mikple.com/a-propos</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -29,17 +37,26 @@
   <!-- FAQ Page -->
   <url>
     <loc>https://mikple.com/faq</loc>
-    <lastmod>2026-02-01</lastmod>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
-  <!-- About Page -->
+  <!-- Privacy Policy -->
   <url>
-    <loc>https://mikple.com/a-propos</loc>
-    <lastmod>2026-02-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://mikple.com/privacy-policy</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Terms of Use -->
+  <url>
+    <loc>https://mikple.com/terms-of-use</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>
+

@@ -1,0 +1,73 @@
+{
+  "name": "MIKPLÉ - Mise en relation Moov Famille",
+  "short_name": "MIKPLÉ",
+  "description": "Service de mise en relation pour forfaits Moov Famille. Économisez jusqu'à 40% sur internet au Bénin. 100% béninois par MIDEESSI.",
+  "start_url": "https://mikple.com/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#191970",
+  "theme_color": "#191970",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "screenshots": [
+    {
+      "src": "/og-image.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/og-image.jpg",
+      "sizes": "540x720",
+      "type": "image/jpeg",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Inscription",
+      "short_name": "S'inscrire",
+      "description": "Rejoindre un forfait Moov Famille",
+      "url": "https://mikple.com/inscription",
+      "icons": [
+        {
+          "src": "/favicon.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Forfaits",
+      "short_name": "Forfaits",
+      "description": "Découvrir les forfaits",
+      "url": "https://mikple.com/forfaits",
+      "icons": [
+        {
+          "src": "/favicon.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false
+}

@@ -3,6 +3,52 @@
   publish = "dist"
 
 [[redirects]]
+  from = "/forfaits/"
+  to = "/forfaits"
+  status = 301
+
+[[redirects]]
+  from = "/inscription/"
+  to = "/inscription"
+  status = 301
+
+[[redirects]]
+  from = "/a-propos/"
+  to = "/a-propos"
+  status = 301
+
+[[redirects]]
+  from = "/faq/"
+  to = "/faq"
+  status = 301
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Headers for SEO optimization
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Content-Type = "text/html; charset=utf-8"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

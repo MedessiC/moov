@@ -1,1 +1,10 @@
+# Avoid trailing slash issues
+/forfaits/ /forfaits 301
+/inscription/ /inscription 301
+/a-propos/ /a-propos 301
+/faq/ /faq 301
+/privacy-policy/ /privacy-policy 301
+/terms-of-use/ /terms-of-use 301
+
+# SPA routing - Keep this last
 /* /index.html 200
