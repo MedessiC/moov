@@ -2,26 +2,7 @@
   command = "bun run build"
   publish = "dist"
 
-[[redirects]]
-  from = "/forfaits/"
-  to = "/forfaits"
-  status = 301
-
-[[redirects]]
-  from = "/inscription/"
-  to = "/inscription"
-  status = 301
-
-[[redirects]]
-  from = "/a-propos/"
-  to = "/a-propos"
-  status = 301
-
-[[redirects]]
-  from = "/faq/"
-  to = "/faq"
-  status = 301
-
+# SPA routing - route all requests to index.html for React Router to handle
 [[redirects]]
   from = "/*"
   to = "/index.html"
