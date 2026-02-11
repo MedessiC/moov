@@ -2,9 +2,22 @@ import { useEffect, useState } from "react";
 import { X, Sparkles } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
+const BANNER_SHOWN_KEY = "mikple_update_banner_shown";
+
 export function UpdateBanner() {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Check if banner has already been shown in this session
+    const hasBeenShown = sessionStorage.getItem(BANNER_SHOWN_KEY);
+    
+    if (!hasBeenShown) {
+      setIsVisible(true);
+      // Mark banner as shown in this session
+      sessionStorage.setItem(BANNER_SHOWN_KEY, "true");
+    }
+  }, []);
 
   useEffect(() => {
     if (isVisible) {
