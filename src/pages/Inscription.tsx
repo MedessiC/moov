@@ -13,13 +13,7 @@ import {
 } from "@/components/ui/select";
 import { CheckCircle2, Loader2, Send, AlertCircle } from "lucide-react";
 import emailjs from "@emailjs/browser";
-
-const forfaitOptions = [
-  { value: "famille-basic", label: "Famille Kpèvi - 1 500 FCFA/mois" },
-  { value: "famille-hebdo", label: "Famille Cléoun - 4 500 FCFA/mois" },
-  { value: "famille-mensuel", label: "Famille Déssou - 5 500 FCFA/mois" },
-  { value: "famille-premium", label: "Famille Jago - 6 500 FCFA/mois" },
-];
+import { forfaits, getForfaitLabel } from "@/lib/forfaits";
 
 interface FormData {
   nom: string;
@@ -138,8 +132,8 @@ export default function Inscription() {
         from_name: `${formData.prenom} ${formData.nom}`,
         numero_moov: formData.numeroMoov,
         whatsapp: formData.whatsapp,
-        forfait: forfaitOptions.find(f => f.value === formData.forfait)?.label || formData.forfait,
-        message: `Nouvelle inscription MIKPLÉ:\n\nNom: ${formData.nom}\nPrénom: ${formData.prenom}\nNuméro Moov: ${formData.numeroMoov}\nWhatsApp: ${formData.whatsapp}\nForfait: ${forfaitOptions.find(f => f.value === formData.forfait)?.label}`,
+        forfait: getForfaitLabel(formData.forfait),
+        message: `Nouvelle inscription MIKPLÉ:\n\nNom: ${formData.nom}\nPrénom: ${formData.prenom}\nNuméro Moov: ${formData.numeroMoov}\nWhatsApp: ${formData.whatsapp}\nForfait: ${getForfaitLabel(formData.forfait)}`,
       };
 
       // Check if EmailJS is configured via env; fall back to provided IDs if not
@@ -195,7 +189,7 @@ export default function Inscription() {
                   <li><strong>Nom:</strong> {formData.nom} {formData.prenom}</li>
                   <li><strong>Numéro Moov:</strong> {formData.numeroMoov}</li>
                   <li><strong>WhatsApp:</strong> {formData.whatsapp}</li>
-                  <li><strong>Forfait:</strong> {forfaitOptions.find(f => f.value === formData.forfait)?.label}</li>
+                  <li><strong>Forfait:</strong> {getForfaitLabel(formData.forfait)}</li>
                 </ul>
               </div>
               <Button asChild variant="gold" size="lg">
@@ -222,7 +216,7 @@ export default function Inscription() {
             </p>
             {preselectedForfait && (
               <div className="mt-4 inline-block bg-gold/10 rounded-md px-3 py-1 text-sm text-foreground">
-                Forfait sélectionné: <strong className="text-gold">{forfaitOptions.find(f => f.value === preselectedForfait)?.label}</strong>
+                Forfait sélectionné: <strong className="text-gold">{getForfaitLabel(preselectedForfait)}</strong>
               </div>
             )}
           </div>
@@ -350,9 +344,9 @@ export default function Inscription() {
                       <SelectValue placeholder="Choisissez un forfait" />
                     </SelectTrigger>
                     <SelectContent>
-                      {forfaitOptions.map((option) => (
-                        <SelectItem key={option.value} value={option.value}>
-                          {option.label}
+                      {forfaits.map((forfait) => (
+                        <SelectItem key={forfait.id} value={forfait.id}>
+                          {forfait.name} - {forfait.perMember}
                         </SelectItem>
                       ))}
                     </SelectContent>
