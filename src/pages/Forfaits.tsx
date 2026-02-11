@@ -23,11 +23,11 @@ const forfaits = [
     name: "Famille Cléoun",
     price: "17 000",
     duration: "Mois",
-    data: "40 Go",
+    data: "55 Go",
     members: "4 membres",
     perMember: "4 500 FCFA/membre",
     features: [
-      "40 Go partagés",
+      "55 Go partagés",
       "Valable 1 mois illimité",
       "4 membres maximum",
     ],
